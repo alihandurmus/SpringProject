@@ -1,0 +1,344 @@
+2024-08-05T10:35:28.555+03:00  INFO 44296 --- [Payroll] [main] payroll.PayrollApplication               : Starting PayrollApplication using Java 21.0.1 with PID 44296 (C:\Users\aliha\OneDrive\Masaüstü\Telenity\Telenity\nonrest\target\classes started by aliha in C:\Users\aliha\OneDrive\Masaüstü\Telenity\Telenity)
+2024-08-05T10:35:28.567+03:00 DEBUG 44296 --- [Payroll] [main] payroll.PayrollApplication               : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-08-05T10:35:28.568+03:00  INFO 44296 --- [Payroll] [main] payroll.PayrollApplication               : No active profile set, falling back to 1 default profile: "default"
+2024-08-05T10:35:29.753+03:00  INFO 44296 --- [Payroll] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-05T10:35:29.755+03:00  INFO 44296 --- [Payroll] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-05T10:35:29.798+03:00  INFO 44296 --- [Payroll] [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface payroll.repository.HttpRequestStatisticRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-08-05T10:35:29.827+03:00  INFO 44296 --- [Payroll] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 5 JPA repository interfaces.
+2024-08-05T10:35:29.838+03:00  INFO 44296 --- [Payroll] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-05T10:35:29.839+03:00  INFO 44296 --- [Payroll] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-08-05T10:35:29.845+03:00  INFO 44296 --- [Payroll] [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface payroll.repository.EmployeeRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2024-08-05T10:35:29.847+03:00  INFO 44296 --- [Payroll] [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface payroll.repository.FileRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2024-08-05T10:35:29.848+03:00  INFO 44296 --- [Payroll] [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface payroll.repository.OrderRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2024-08-05T10:35:29.848+03:00  INFO 44296 --- [Payroll] [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface payroll.repository.PagingRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2024-08-05T10:35:29.849+03:00  INFO 44296 --- [Payroll] [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface payroll.repository.UserRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2024-08-05T10:35:29.854+03:00  INFO 44296 --- [Payroll] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 1 MongoDB repository interface.
+2024-08-05T10:35:30.733+03:00  INFO 44296 --- [Payroll] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-05T10:35:30.746+03:00  INFO 44296 --- [Payroll] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-05T10:35:30.747+03:00  INFO 44296 --- [Payroll] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-05T10:35:30.816+03:00  INFO 44296 --- [Payroll] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-05T10:35:30.817+03:00  INFO 44296 --- [Payroll] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2204 ms
+2024-08-05T10:35:31.016+03:00  INFO 44296 --- [Payroll] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-05T10:35:31.542+03:00  INFO 44296 --- [Payroll] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3cf06a01
+2024-08-05T10:35:31.544+03:00  INFO 44296 --- [Payroll] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-05T10:35:31.634+03:00  INFO 44296 --- [Payroll] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-05T10:35:31.714+03:00  INFO 44296 --- [Payroll] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-05T10:35:31.758+03:00  INFO 44296 --- [Payroll] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-05T10:35:32.112+03:00  INFO 44296 --- [Payroll] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-05T10:35:32.229+03:00  WARN 44296 --- [Payroll] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-05T10:35:33.214+03:00  INFO 44296 --- [Payroll] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-05T10:35:34.798+03:00  INFO 44296 --- [Payroll] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-05T10:35:35.182+03:00 DEBUG 44296 --- [Payroll] [main] payroll.config.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-08-05T10:35:35.268+03:00  INFO 44296 --- [Payroll] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-08-05T10:35:35.269+03:00  WARN 44296 --- [Payroll] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-05T10:35:35.640+03:00  INFO 44296 --- [Payroll] [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.0.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.1+12-LTS-29"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@26501edd], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@5eb054, com.mongodb.Jep395RecordCodecProvider@34d08905, com.mongodb.KotlinCodecProvider@57421698]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@4f5080ea], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-08-05T10:35:35.665+03:00  INFO 44296 --- [Payroll] [cluster-ClusterId{value='66b080c732826a62d8235839', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=38635000}
+2024-08-05T10:35:36.028+03:00  WARN 44296 --- [Payroll] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-05T10:35:36.234+03:00  INFO 44296 --- [Payroll] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-08-05T10:35:37.169+03:00  INFO 44296 --- [Payroll] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-08-05T10:35:37.868+03:00  INFO 44296 --- [Payroll] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-05T10:35:37.880+03:00  INFO 44296 --- [Payroll] [main] payroll.PayrollApplication               : Started PayrollApplication in 9.675 seconds (process running for 25.52)
+2024-08-05T10:35:38.096+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=1, firstname='Ethan', lastname='Huels', role='Phone'}
+2024-08-05T10:35:38.138+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=2, firstname='Robbie', lastname='Mills', role='Television'}
+2024-08-05T10:35:38.152+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=3, firstname='Sheena', lastname='Reinger', role='Phone'}
+2024-08-05T10:35:38.165+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=4, firstname='Lani', lastname='Prohaska', role='Television'}
+2024-08-05T10:35:38.178+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=5, firstname='Regina', lastname='Greenfelder', role='Phone'}
+2024-08-05T10:35:38.192+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=6, firstname='Louie', lastname='Ondricka', role='Television'}
+2024-08-05T10:35:38.204+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=7, firstname='Lionel', lastname='Jacobi', role='Phone'}
+2024-08-05T10:35:38.215+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=8, firstname='Ilse', lastname='Gerhold', role='Television'}
+2024-08-05T10:35:38.225+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=9, firstname='Desirae', lastname='Gibson', role='Phone'}
+2024-08-05T10:35:38.233+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=10, firstname='Fernando', lastname='Leannon', role='Television'}
+2024-08-05T10:35:38.244+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=11, firstname='Luis', lastname='Bednar', role='Phone'}
+2024-08-05T10:35:38.252+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=12, firstname='Lea', lastname='Schiller', role='Television'}
+2024-08-05T10:35:38.261+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=13, firstname='Many', lastname='Friesen', role='Phone'}
+2024-08-05T10:35:38.270+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=14, firstname='Lessie', lastname='Cremin', role='Television'}
+2024-08-05T10:35:38.281+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=15, firstname='Dale', lastname='Towne', role='Phone'}
+2024-08-05T10:35:38.293+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=16, firstname='Son', lastname='Jerde', role='Television'}
+2024-08-05T10:35:38.306+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=17, firstname='Marilou', lastname='Schamberger', role='Phone'}
+2024-08-05T10:35:38.316+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=18, firstname='Clayton', lastname='Thompson', role='Television'}
+2024-08-05T10:35:38.328+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=19, firstname='Forest', lastname='Torp', role='Phone'}
+2024-08-05T10:35:38.339+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=20, firstname='Sheilah', lastname='Reichert', role='Television'}
+2024-08-05T10:35:38.352+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=21, firstname='Renato', lastname='Turner', role='Phone'}
+2024-08-05T10:35:38.365+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=22, firstname='Tiesha', lastname='Mosciski', role='Television'}
+2024-08-05T10:35:38.376+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=23, firstname='Katy', lastname='Yundt', role='Phone'}
+2024-08-05T10:35:38.386+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=24, firstname='Federico', lastname='Schmidt', role='Television'}
+2024-08-05T10:35:38.395+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=25, firstname='Randy', lastname='Krajcik', role='Phone'}
+2024-08-05T10:35:38.406+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=26, firstname='Chung', lastname='Bechtelar', role='Television'}
+2024-08-05T10:35:38.417+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=27, firstname='Gidget', lastname='Stroman', role='Phone'}
+2024-08-05T10:35:38.429+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=28, firstname='Jamar', lastname='Turner', role='Television'}
+2024-08-05T10:35:38.438+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=29, firstname='Krysta', lastname='Dare', role='Phone'}
+2024-08-05T10:35:38.446+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=30, firstname='Broderick', lastname='Lang', role='Television'}
+2024-08-05T10:35:38.457+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=31, firstname='Demarcus', lastname='Walter', role='Phone'}
+2024-08-05T10:35:38.471+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=32, firstname='Buck', lastname='Kessler', role='Television'}
+2024-08-05T10:35:38.485+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=33, firstname='Palmer', lastname='Goodwin', role='Phone'}
+2024-08-05T10:35:38.496+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=34, firstname='Donald', lastname='Prosacco', role='Television'}
+2024-08-05T10:35:38.510+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=35, firstname='Lance', lastname='Bogan', role='Phone'}
+2024-08-05T10:35:38.521+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=36, firstname='Emilio', lastname='Gorczany', role='Television'}
+2024-08-05T10:35:38.531+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=37, firstname='Agustin', lastname='Fritsch', role='Phone'}
+2024-08-05T10:35:38.542+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=38, firstname='Raphael', lastname='Jacobson', role='Television'}
+2024-08-05T10:35:38.552+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=39, firstname='Janina', lastname='Tromp', role='Phone'}
+2024-08-05T10:35:38.562+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=40, firstname='Detra', lastname='Thompson', role='Television'}
+2024-08-05T10:35:38.571+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=41, firstname='Lexie', lastname='Stiedemann', role='Phone'}
+2024-08-05T10:35:38.580+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=42, firstname='Camila', lastname='Doyle', role='Television'}
+2024-08-05T10:35:38.592+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=43, firstname='Armand', lastname='Waters', role='Phone'}
+2024-08-05T10:35:38.602+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=44, firstname='Ethan', lastname='Corkery', role='Television'}
+2024-08-05T10:35:38.612+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=45, firstname='Josue', lastname='Hoppe', role='Phone'}
+2024-08-05T10:35:38.626+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=46, firstname='Theron', lastname='Heller', role='Television'}
+2024-08-05T10:35:38.641+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=47, firstname='Sid', lastname='Bartell', role='Phone'}
+2024-08-05T10:35:38.654+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=48, firstname='Aja', lastname='Lehner', role='Television'}
+2024-08-05T10:35:38.667+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=49, firstname='Adell', lastname='Armstrong', role='Phone'}
+2024-08-05T10:35:38.678+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Employee{id=50, firstname='Leslie', lastname='Stark', role='Television'}
+2024-08-05T10:35:38.710+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=1, description='Sleek Copper Shirt', status=COMPLETED}
+2024-08-05T10:35:38.730+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=2, description='Rustic Marble Keyboard', status=IN_PROGRESS}
+2024-08-05T10:35:38.742+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=3, description='Incredible Linen Pants', status=COMPLETED}
+2024-08-05T10:35:38.750+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=4, description='Rustic Marble Pants', status=IN_PROGRESS}
+2024-08-05T10:35:38.759+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=5, description='Fantastic Silk Bottle', status=COMPLETED}
+2024-08-05T10:35:38.770+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=6, description='Durable Concrete Hat', status=IN_PROGRESS}
+2024-08-05T10:35:38.779+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=7, description='Fantastic Copper Bench', status=COMPLETED}
+2024-08-05T10:35:38.789+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=8, description='Practical Granite Bench', status=IN_PROGRESS}
+2024-08-05T10:35:38.800+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=9, description='Gorgeous Steel Bottle', status=COMPLETED}
+2024-08-05T10:35:38.813+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=10, description='Sleek Paper Bag', status=IN_PROGRESS}
+2024-08-05T10:35:38.827+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=11, description='Mediocre Wooden Shoes', status=COMPLETED}
+2024-08-05T10:35:38.838+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=12, description='Practical Wooden Knife', status=IN_PROGRESS}
+2024-08-05T10:35:38.852+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=13, description='Intelligent Granite Chair', status=COMPLETED}
+2024-08-05T10:35:38.866+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=14, description='Rustic Bronze Chair', status=IN_PROGRESS}
+2024-08-05T10:35:38.876+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=15, description='Incredible Linen Bench', status=COMPLETED}
+2024-08-05T10:35:38.887+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=16, description='Intelligent Concrete Bag', status=IN_PROGRESS}
+2024-08-05T10:35:38.897+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=17, description='Ergonomic Rubber Gloves', status=COMPLETED}
+2024-08-05T10:35:38.905+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=18, description='Sleek Paper Keyboard', status=IN_PROGRESS}
+2024-08-05T10:35:38.914+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=19, description='Gorgeous Granite Plate', status=COMPLETED}
+2024-08-05T10:35:38.923+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=20, description='Aerodynamic Wool Computer', status=IN_PROGRESS}
+2024-08-05T10:35:38.932+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=21, description='Fantastic Silk Gloves', status=COMPLETED}
+2024-08-05T10:35:38.943+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=22, description='Fantastic Cotton Car', status=IN_PROGRESS}
+2024-08-05T10:35:38.954+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=23, description='Awesome Wool Shirt', status=COMPLETED}
+2024-08-05T10:35:38.965+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=24, description='Small Rubber Car', status=IN_PROGRESS}
+2024-08-05T10:35:38.978+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=25, description='Enormous Iron Plate', status=COMPLETED}
+2024-08-05T10:35:38.992+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=26, description='Durable Copper Wallet', status=IN_PROGRESS}
+2024-08-05T10:35:39.001+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=27, description='Durable Concrete Bench', status=COMPLETED}
+2024-08-05T10:35:39.012+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=28, description='Practical Steel Plate', status=IN_PROGRESS}
+2024-08-05T10:35:39.024+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=29, description='Rustic Wooden Keyboard', status=COMPLETED}
+2024-08-05T10:35:39.034+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=30, description='Awesome Rubber Table', status=IN_PROGRESS}
+2024-08-05T10:35:39.043+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=31, description='Synergistic Aluminum Hat', status=COMPLETED}
+2024-08-05T10:35:39.052+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=32, description='Fantastic Granite Shoes', status=IN_PROGRESS}
+2024-08-05T10:35:39.060+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=33, description='Practical Iron Shirt', status=COMPLETED}
+2024-08-05T10:35:39.071+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=34, description='Fantastic Plastic Keyboard', status=IN_PROGRESS}
+2024-08-05T10:35:39.079+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=35, description='Durable Granite Shoes', status=COMPLETED}
+2024-08-05T10:35:39.088+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=36, description='Enormous Bronze Gloves', status=IN_PROGRESS}
+2024-08-05T10:35:39.101+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=37, description='Durable Copper Car', status=COMPLETED}
+2024-08-05T10:35:39.113+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=38, description='Synergistic Wooden Watch', status=IN_PROGRESS}
+2024-08-05T10:35:39.125+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=39, description='Incredible Plastic Bag', status=COMPLETED}
+2024-08-05T10:35:39.138+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=40, description='Enormous Wool Hat', status=IN_PROGRESS}
+2024-08-05T10:35:39.149+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=41, description='Gorgeous Rubber Bag', status=COMPLETED}
+2024-08-05T10:35:39.163+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=42, description='Intelligent Paper Computer', status=IN_PROGRESS}
+2024-08-05T10:35:39.174+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=43, description='Aerodynamic Marble Gloves', status=COMPLETED}
+2024-08-05T10:35:39.187+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=44, description='Sleek Marble Coat', status=IN_PROGRESS}
+2024-08-05T10:35:39.197+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=45, description='Lightweight Paper Watch', status=COMPLETED}
+2024-08-05T10:35:39.207+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=46, description='Heavy Duty Cotton Plate', status=IN_PROGRESS}
+2024-08-05T10:35:39.217+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=47, description='Durable Silk Coat', status=COMPLETED}
+2024-08-05T10:35:39.226+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=48, description='Durable Leather Computer', status=IN_PROGRESS}
+2024-08-05T10:35:39.235+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=49, description='Intelligent Cotton Bench', status=COMPLETED}
+2024-08-05T10:35:39.244+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloading Order{id=50, description='Sleek Leather Hat', status=IN_PROGRESS}
+2024-08-05T10:35:40.187+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=1, firstname='Ethan', lastname='Huels', role='Phone'}
+2024-08-05T10:35:40.187+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=2, firstname='Robbie', lastname='Mills', role='Television'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=3, firstname='Sheena', lastname='Reinger', role='Phone'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=4, firstname='Lani', lastname='Prohaska', role='Television'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=5, firstname='Regina', lastname='Greenfelder', role='Phone'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=6, firstname='Louie', lastname='Ondricka', role='Television'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=7, firstname='Lionel', lastname='Jacobi', role='Phone'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=8, firstname='Ilse', lastname='Gerhold', role='Television'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=9, firstname='Desirae', lastname='Gibson', role='Phone'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=10, firstname='Fernando', lastname='Leannon', role='Television'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=11, firstname='Luis', lastname='Bednar', role='Phone'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=12, firstname='Lea', lastname='Schiller', role='Television'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=13, firstname='Many', lastname='Friesen', role='Phone'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=14, firstname='Lessie', lastname='Cremin', role='Television'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=15, firstname='Dale', lastname='Towne', role='Phone'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=16, firstname='Son', lastname='Jerde', role='Television'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=17, firstname='Marilou', lastname='Schamberger', role='Phone'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=18, firstname='Clayton', lastname='Thompson', role='Television'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=19, firstname='Forest', lastname='Torp', role='Phone'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=20, firstname='Sheilah', lastname='Reichert', role='Television'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=21, firstname='Renato', lastname='Turner', role='Phone'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=22, firstname='Tiesha', lastname='Mosciski', role='Television'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=23, firstname='Katy', lastname='Yundt', role='Phone'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=24, firstname='Federico', lastname='Schmidt', role='Television'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=25, firstname='Randy', lastname='Krajcik', role='Phone'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=26, firstname='Chung', lastname='Bechtelar', role='Television'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=27, firstname='Gidget', lastname='Stroman', role='Phone'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=28, firstname='Jamar', lastname='Turner', role='Television'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=29, firstname='Krysta', lastname='Dare', role='Phone'}
+2024-08-05T10:35:40.188+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=30, firstname='Broderick', lastname='Lang', role='Television'}
+2024-08-05T10:35:40.189+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=31, firstname='Demarcus', lastname='Walter', role='Phone'}
+2024-08-05T10:35:40.189+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=32, firstname='Buck', lastname='Kessler', role='Television'}
+2024-08-05T10:35:40.189+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=33, firstname='Palmer', lastname='Goodwin', role='Phone'}
+2024-08-05T10:35:40.189+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=34, firstname='Donald', lastname='Prosacco', role='Television'}
+2024-08-05T10:35:40.189+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=35, firstname='Lance', lastname='Bogan', role='Phone'}
+2024-08-05T10:35:40.189+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=36, firstname='Emilio', lastname='Gorczany', role='Television'}
+2024-08-05T10:35:40.189+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=37, firstname='Agustin', lastname='Fritsch', role='Phone'}
+2024-08-05T10:35:40.189+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=38, firstname='Raphael', lastname='Jacobson', role='Television'}
+2024-08-05T10:35:40.189+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=39, firstname='Janina', lastname='Tromp', role='Phone'}
+2024-08-05T10:35:40.189+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=40, firstname='Detra', lastname='Thompson', role='Television'}
+2024-08-05T10:35:40.189+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=41, firstname='Lexie', lastname='Stiedemann', role='Phone'}
+2024-08-05T10:35:40.189+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=42, firstname='Camila', lastname='Doyle', role='Television'}
+2024-08-05T10:35:40.189+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=43, firstname='Armand', lastname='Waters', role='Phone'}
+2024-08-05T10:35:40.189+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=44, firstname='Ethan', lastname='Corkery', role='Television'}
+2024-08-05T10:35:40.189+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=45, firstname='Josue', lastname='Hoppe', role='Phone'}
+2024-08-05T10:35:40.189+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=46, firstname='Theron', lastname='Heller', role='Television'}
+2024-08-05T10:35:40.189+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=47, firstname='Sid', lastname='Bartell', role='Phone'}
+2024-08-05T10:35:40.189+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=48, firstname='Aja', lastname='Lehner', role='Television'}
+2024-08-05T10:35:40.189+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=49, firstname='Adell', lastname='Armstrong', role='Phone'}
+2024-08-05T10:35:40.189+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Employee{id=50, firstname='Leslie', lastname='Stark', role='Television'}
+2024-08-05T10:35:40.258+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=1, description='Sleek Copper Shirt', status=COMPLETED}
+2024-08-05T10:35:40.258+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=2, description='Rustic Marble Keyboard', status=IN_PROGRESS}
+2024-08-05T10:35:40.258+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=3, description='Incredible Linen Pants', status=COMPLETED}
+2024-08-05T10:35:40.258+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=4, description='Rustic Marble Pants', status=IN_PROGRESS}
+2024-08-05T10:35:40.258+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=5, description='Fantastic Silk Bottle', status=COMPLETED}
+2024-08-05T10:35:40.258+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=6, description='Durable Concrete Hat', status=IN_PROGRESS}
+2024-08-05T10:35:40.258+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=7, description='Fantastic Copper Bench', status=COMPLETED}
+2024-08-05T10:35:40.258+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=8, description='Practical Granite Bench', status=IN_PROGRESS}
+2024-08-05T10:35:40.258+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=9, description='Gorgeous Steel Bottle', status=COMPLETED}
+2024-08-05T10:35:40.258+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=10, description='Sleek Paper Bag', status=IN_PROGRESS}
+2024-08-05T10:35:40.259+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=11, description='Mediocre Wooden Shoes', status=COMPLETED}
+2024-08-05T10:35:40.259+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=12, description='Practical Wooden Knife', status=IN_PROGRESS}
+2024-08-05T10:35:40.259+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=13, description='Intelligent Granite Chair', status=COMPLETED}
+2024-08-05T10:35:40.259+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=14, description='Rustic Bronze Chair', status=IN_PROGRESS}
+2024-08-05T10:35:40.259+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=15, description='Incredible Linen Bench', status=COMPLETED}
+2024-08-05T10:35:40.259+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=16, description='Intelligent Concrete Bag', status=IN_PROGRESS}
+2024-08-05T10:35:40.259+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=17, description='Ergonomic Rubber Gloves', status=COMPLETED}
+2024-08-05T10:35:40.259+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=18, description='Sleek Paper Keyboard', status=IN_PROGRESS}
+2024-08-05T10:35:40.259+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=19, description='Gorgeous Granite Plate', status=COMPLETED}
+2024-08-05T10:35:40.259+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=20, description='Aerodynamic Wool Computer', status=IN_PROGRESS}
+2024-08-05T10:35:40.259+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=21, description='Fantastic Silk Gloves', status=COMPLETED}
+2024-08-05T10:35:40.259+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=22, description='Fantastic Cotton Car', status=IN_PROGRESS}
+2024-08-05T10:35:40.259+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=23, description='Awesome Wool Shirt', status=COMPLETED}
+2024-08-05T10:35:40.259+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=24, description='Small Rubber Car', status=IN_PROGRESS}
+2024-08-05T10:35:40.259+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=25, description='Enormous Iron Plate', status=COMPLETED}
+2024-08-05T10:35:40.259+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=26, description='Durable Copper Wallet', status=IN_PROGRESS}
+2024-08-05T10:35:40.259+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=27, description='Durable Concrete Bench', status=COMPLETED}
+2024-08-05T10:35:40.259+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=28, description='Practical Steel Plate', status=IN_PROGRESS}
+2024-08-05T10:35:40.259+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=29, description='Rustic Wooden Keyboard', status=COMPLETED}
+2024-08-05T10:35:40.259+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=30, description='Awesome Rubber Table', status=IN_PROGRESS}
+2024-08-05T10:35:40.259+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=31, description='Synergistic Aluminum Hat', status=COMPLETED}
+2024-08-05T10:35:40.259+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=32, description='Fantastic Granite Shoes', status=IN_PROGRESS}
+2024-08-05T10:35:40.259+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=33, description='Practical Iron Shirt', status=COMPLETED}
+2024-08-05T10:35:40.260+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=34, description='Fantastic Plastic Keyboard', status=IN_PROGRESS}
+2024-08-05T10:35:40.260+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=35, description='Durable Granite Shoes', status=COMPLETED}
+2024-08-05T10:35:40.260+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=36, description='Enormous Bronze Gloves', status=IN_PROGRESS}
+2024-08-05T10:35:40.260+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=37, description='Durable Copper Car', status=COMPLETED}
+2024-08-05T10:35:40.260+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=38, description='Synergistic Wooden Watch', status=IN_PROGRESS}
+2024-08-05T10:35:40.260+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=39, description='Incredible Plastic Bag', status=COMPLETED}
+2024-08-05T10:35:40.260+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=40, description='Enormous Wool Hat', status=IN_PROGRESS}
+2024-08-05T10:35:40.260+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=41, description='Gorgeous Rubber Bag', status=COMPLETED}
+2024-08-05T10:35:40.260+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=42, description='Intelligent Paper Computer', status=IN_PROGRESS}
+2024-08-05T10:35:40.260+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=43, description='Aerodynamic Marble Gloves', status=COMPLETED}
+2024-08-05T10:35:40.260+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=44, description='Sleek Marble Coat', status=IN_PROGRESS}
+2024-08-05T10:35:40.260+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=45, description='Lightweight Paper Watch', status=COMPLETED}
+2024-08-05T10:35:40.260+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=46, description='Heavy Duty Cotton Plate', status=IN_PROGRESS}
+2024-08-05T10:35:40.260+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=47, description='Durable Silk Coat', status=COMPLETED}
+2024-08-05T10:35:40.260+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=48, description='Durable Leather Computer', status=IN_PROGRESS}
+2024-08-05T10:35:40.260+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=49, description='Intelligent Cotton Bench', status=COMPLETED}
+2024-08-05T10:35:40.260+03:00  INFO 44296 --- [Payroll] [main] payroll.database.LoadDatabase            : Preloaded Order{id=50, description='Sleek Leather Hat', status=IN_PROGRESS}
+2024-08-05T10:36:05.298+03:00  INFO 44296 --- [Payroll] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-05T10:36:05.299+03:00  INFO 44296 --- [Payroll] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-05T10:36:05.300+03:00  INFO 44296 --- [Payroll] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-05T10:42:29.612+03:00  INFO 44296 --- [Payroll] [http-nio-8080-exec-4] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = Payroll-producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-08-05T10:42:29.672+03:00  INFO 44296 --- [Payroll] [http-nio-8080-exec-4] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-08-05T10:42:29.726+03:00  INFO 44296 --- [Payroll] [http-nio-8080-exec-4] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=Payroll-producer-1] Instantiated an idempotent producer.
+2024-08-05T10:42:29.858+03:00  INFO 44296 --- [Payroll] [http-nio-8080-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.0
+2024-08-05T10:42:29.858+03:00  INFO 44296 --- [Payroll] [http-nio-8080-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 2ae524ed625438c5
+2024-08-05T10:42:29.858+03:00  INFO 44296 --- [Payroll] [http-nio-8080-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1722843749851
+2024-08-05T10:42:30.664+03:00  INFO 44296 --- [Payroll] [kafka-producer-network-thread | Payroll-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=Payroll-producer-1] Cluster ID: qVmZvmNJQm-huDC49GL-fg
+2024-08-05T10:42:30.789+03:00  INFO 44296 --- [Payroll] [kafka-producer-network-thread | Payroll-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=Payroll-producer-1] ProducerId set to 0 with epoch 0
+2024-08-05T10:51:30.730+03:00  INFO 44296 --- [Payroll] [kafka-producer-network-thread | Payroll-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=Payroll-producer-1] Node -1 disconnected.
+2024-08-05T11:01:30.750+03:00  INFO 44296 --- [Payroll] [kafka-producer-network-thread | Payroll-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=Payroll-producer-1] Node -1 disconnected.

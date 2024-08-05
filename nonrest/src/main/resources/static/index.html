@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload, Download and Report</title>
+</head>
+<body>
+<h1>File Upload and Download</h1>
+
+<h2>Upload File</h2>
+<input type="file" id="fileInput">
+<button onclick="uploadFile()">Upload</button>
+
+<h2>Download File</h2>
+<input type="number" id="fileIdInput" placeholder="Enter File ID">
+<button onclick="downloadFile()">Download</button>
+
+<h1>Generate Report</h1>
+<h2>Select Date Range</h2>
+<label for="startDate">Start Date:</label>
+<input type="date" id="startDate" name="startDate">
+<label for="endDate">End Date:</label>
+<input type="date" id="endDate" name="endDate">
+<button onclick="generateReport()">Generate Report</button>
+
+<script>
+    async function uploadFile() {
+        const fileInput = document.getElementById('fileInput');
+        const file = fileInput.files[0];
+        const formData = new FormData();
+        formData.append('file', file);
+
+        try {
+            const response = await fetch('/api/files/upload', {
+                method: 'POST',
+                body: formData
+            });
+            if (response.ok) {
+                alert('File uploaded successfully!');
+            } else {
+                alert('File upload failed!');
+            }
+        } catch (error) {
+            console.error('Error uploading file:', error);
+            alert('File upload failed!');
+        }
+    }
+
+    async function downloadFile() {
+        const fileId = document.getElementById('fileIdInput').value;
+
+        try {
+            const response = await fetch(`/api/files/download/${fileId}`);
+            if (response.ok) {
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'downloadedFile';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                alert('File downloaded successfully!');
+            } else {
+                alert('File download failed!');
+            }
+        } catch (error) {
+            console.error('Error downloading file:', error);
+            alert('File download failed!');
+        }
+    }
+
+    async function generateReport() {
+        const startDate = document.getElementById('startDate').value;
+        const endDate = document.getElementById('endDate').value;
+
+        if (!startDate || !endDate) {
+            alert('Please select both start and end dates.');
+            return;
+        }
+
+        try {
+            const response = await fetch(`/api/files/report?startDate=${startDate}&endDate=${endDate}`, {
+                method: 'GET'
+            });
+            if (response.ok) {
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'report.pdf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                alert('Report generated successfully!');
+            } else {
+                alert('Failed to generate report.');
+            }
+        } catch (error) {
+            console.error('Error generating report:', error);
+            alert('Failed to generate report.');
+        }
+    }
+</script>
+</body>
+</html>

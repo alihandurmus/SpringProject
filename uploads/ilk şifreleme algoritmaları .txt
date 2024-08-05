@@ -1,0 +1,88 @@
+ilk şifreleme algoritmaları 
+sezar şifreleme (kaydırma)
+yerine koyma 
+affine
+
+sezar şifreleme
+bir şifreyi alıyoruz
+bi anahtar var bi de şifrelenmiş mesaj var
+sezar şifrelemede anahtar mesela 2 olsun mesaj da "baba dede" olsun
+her harfi 2 harf kaydırarak şfireler yani "dcdc fgfg" olur şifrelenmiş mesaj
+anahtarı karşı taraf da bilece sonra giden kişi bu anahtara göre decyrpt edebilir
+
+yerine koyma şifrelemesi
+her harfin yerine başka bir harf koyma algoritmasına dayanır
+mesela açık metnimiz "baba dede" olsun anahtarımız = 
+"abcdefgh"
+"fdeachgb" olsun şifrelenmiş mesajımız = "dfdf acac" olacak yani a yerine f b yerine d gelecek gibi düşün
+
+
+affine şifreleme doğrusal şifreleme
+y=ax+b doğrusal fonksiyonu kullanılarak yapılır
+şu şekilde x burada harfimiz
+mesela metnimiz = "baba dede" olsun b harfi alfabede 2. harf olduğu için buna göre şifreleme yapılır yani anahtar da veriliyor yani buradaki ax+b denklemi için mesela anahtarımız (3,2) olsun x de harfimiz olduğu için denklemde yerine koyarsak 3*2 + 2 den 8 olur 8 de alfabede h harfi yerine geçer bütün harfleri böyle şifrelersek şifrelenmiş mesajımız "hehe nqnq" olur
+kriptoanaliz frekans analizi
+
+
+nasıl analizi yaparız
+en güvenilir yerine koyma şifrelemesidir
+ilk yapılacak saldırı algoritması brute force olarak geçer
+brute force yaparak yani deneyerek anlamlı mesaj gelene kadar saldırı şeklidir
+boşluk genelde kullanılmaz bu bir zayıflıktır
+frekans analizi de bir saldırı yöntemidir.
+harflerin frekanslarını çıkararak saldırı yapar
+mesela ingilizce dilinde en çok kullanılan harf e dir eğer şifreli mesajımızda frekans analizi yaparak en çok kullanılan harfi x olarak bulursak şöyle bir tahmin yürütebiliriz x harfi e harfinin karşılığı olabilir gibi
+
+blok şifreleme ve vigenere şifreleme
+harf harf sayı değerlerini alıp üst üste toplayıp yeni harf değerleriyle yeni bir şifreli mesaj üretiriz
+mesela mesajımız "mesaj" olsun
+anahtarımız da "ali" kelimesi olsun yani ali kelimesiyle şifreleyeceğiz
+mesaj = 13 5 19 1 10 bunlar harflerin alfabede kaçıncı sırada olduğunu gösteren değerler
+ali = 1 12 9 dur
+bunları alt alta yazarak toplarız yani = şimdi ali mesajdan daha kısa olduğu için tekrardan baştan başlayarak mesaj bitene kadar bi döngü halinde yazarız
+       13 05 19 01 10
+       01 12 09 01 12
+toplam 14 17 28 02 22 burada 28 de harf olmadığı için 26 ya bölüp kalanı alırız yani 28 02 olur mesaj 14 17 02 02 22 olur yani nqbbw şifreli mesajını elde ederiz
+
+kasiski saldırısı
+üretilmiş olan şifreli mesajda tekrar eden yerleri bularak onların katı şeklinde blok boyutunu bulursun ve şifreyi decrypt edebilirsin
+
+simetrik şifreleme (DES)
+encrypt ve decrypt bulunmak zorunda aynı anahtarla ama asimetrik şifrelemede mesajı açmak zorunda değiliz
+
+asimetrik şifreleme
+yeterince büyük 2 adet asal sayı seçilir
+p ve q sonra çarptık n dedik buna
+totient fonksiyonu hesaplanır
+sonra e sayısı hesaplanır
+sonra d sayısı hesaplanır e ile aralarında asal olacak
+
+açık anahtar şifreleme kullanım alanları
+kimden geldiğime emin olma durumunda kullanılır
+şifrelenmiş olarak mesaj gönderme durumunda kullanılır
+kimsenin okumadığına emin olma durumu
+
+blok şifreleme modları
+hashin bi özetleme fonksiyonudur
+sitelerde bizim girdiğimiz şifreler veritabanında hash ile tutulur
+ben login ekranına girdiğim şifreyi yine md5 ile hashlenerek veritabanındaki hash ile karşılaştırılır aynıysa doğru der farklıysa girmene izin vermez
+telif için ispat için de kullanılır
+indirdiğimiz dosyanın eksik gönderildi mi tam mı gönderildi onu doğrulamak için de bu hash fonksiyonlarını kullanarak öğrenebilirz
+
+md5
+güvenli değil ciddi zçıkları var
+sha1 güvenli
+
+
+AES advanced encryption standarts
+3DES 128 bitlik anahtar
+simetrik blok şifreleme
+güvenlik 
+hızlı çalışması
+daha az hafızayla çalışıyor
+esnek
+rijndael algoritması
+mix columns
+sbox
+round anahtar üretir
+addroundkey
