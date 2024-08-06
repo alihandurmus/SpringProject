@@ -74,7 +74,7 @@ public class PdfReportService {
 
     private String getCount(List<StaticsService.StatisticsResult.CountByMethodStatus> counts, String method, String status) {
         return counts.stream()
-                .filter(count -> count.getMethod().equals(method) && count.getStatus().equals(status))
+                .filter(count -> count.getMethod().equals(method) && count.getStatus().equals(status))//exception
                 .map(count -> String.valueOf(count.getCount()))
                 .findFirst()
                 .orElse("0");

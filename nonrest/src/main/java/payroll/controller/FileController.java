@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import payroll.model.File;
 import payroll.service.FileStorageService;
-import payroll.service.KafkaProducer;
+import payroll.service.KafkaProducerClass;
 import payroll.service.PdfReportService;
 
 import java.io.ByteArrayInputStream;
@@ -28,7 +28,7 @@ public class FileController {
     @Autowired
     private FileStorageService fileStorageService;
     @Autowired
-    private KafkaProducer kafkaProducer;
+    private KafkaProducerClass kafkaProducerClass;
     @Autowired
     private PdfReportService pdfReportService;
 
@@ -37,11 +37,11 @@ public class FileController {
         try {
             File uploadedFile = fileStorageService.storeFile(file);
             Long milistime = System.currentTimeMillis();
-            kafkaProducer.send("method:POST,status:Success,message:File uploaded successfully,timestamp:" + milistime);
+            kafkaProducerClass.send("method:POST,status:Success,message:File uploaded successfully,timestamp:" + milistime);
             return new ResponseEntity<>(uploadedFile, HttpStatus.OK);
         } catch (IOException e) {
             Long milistime = System.currentTimeMillis();
-            kafkaProducer.send("method:POST,status:Fail,message:File upload fail,timestamp:" + milistime);
+            kafkaProducerClass.send("method:POST,status:Fail,message:File upload fail,timestamp:" + milistime);
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -57,19 +57,19 @@ public class FileController {
                 headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + dbFile.getFilename() + "\"");
                 headers.add(HttpHeaders.CONTENT_TYPE, dbFile.getFileType());
                 Long milistime = System.currentTimeMillis();
-                kafkaProducer.send("method:GET,status:Success,message:File downloaded successfully,timestamp:" + milistime);
+                kafkaProducerClass.send("method:GET,status:Success,message:File downloaded successfully,timestamp:" + milistime);
                 return new ResponseEntity<>(data, headers, HttpStatus.OK);
 
             } catch (IOException e) {
                 Long milistime = System.currentTimeMillis();
-                kafkaProducer.send("method:GET,status:Fail,message:File download fail,timestamp:" + milistime);
+                kafkaProducerClass.send("method:GET,status:Fail,message:File download fail,timestamp:" + milistime);
                 return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
             }
 
 
         } else {
             Long milistime = System.currentTimeMillis();
-            kafkaProducer.send("method:GET,status:Fail,message:File download fail,timestamp:" + milistime);
+            kafkaProducerClass.send("method:GET,status:Fail,message:File download fail,timestamp:" + milistime);
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 

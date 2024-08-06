@@ -17,7 +17,7 @@ import payroll.model.EmployeeDTO;
 import payroll.model.Order;
 import payroll.repository.OrderRepository;
 import payroll.service.EmployeeService;
-import payroll.service.KafkaProducer;
+import payroll.service.KafkaProducerClass;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
@@ -36,7 +36,7 @@ public class EmployeeController {
     @Autowired
     private OrderRepository orderRepository;
     @Autowired
-    private KafkaProducer kafkaProducer;
+    private KafkaProducerClass kafkaProducerClass;
 
     //@ApiOperation(value = "Bütün çalışanları listele",response = List.class)
     @GetMapping()
