@@ -29,9 +29,13 @@ public class EmployeeService {
     private EmployeeRepository employeeRepository;// Autowired daha az kod esneklik fakat final kullanman gerekiyosa contructor injection.
     @Autowired
     private OrderRepository orderRepository;
+    @Autowired
+    private KafkaProducerClass kafkaProducerClass;
     @Cacheable(value = "employees")
     public Page<EmployeeDTO> getEmployees(PageRequest pageRequest) {
         if (pageRequest == null) {
+            Long milistime = System.currentTimeMillis();
+            kafkaProducerClass.send("method:GET,status:Fail,message:Employee get process fail,timestamp:"+milistime);
             throw new ValidationException("Page request is null");
         }
         return employeeRepository.findAll(pageRequest)
@@ -41,6 +45,8 @@ public class EmployeeService {
     @Cacheable(value = "employees",key = "#id")
     public Optional<EmployeeDTO> getOneEmployee(Long id) {
         if (!employeeRepository.existsById(id)) {
+            Long milistime = System.currentTimeMillis();
+            kafkaProducerClass.send("method:GET,status:Fail,message:Employee get one process fail,timestamp:"+milistime);
             throw new ResourceNotFoundException("Employee not found");
         }
         return employeeRepository.findById(id)
@@ -49,6 +55,8 @@ public class EmployeeService {
     @CachePut(value = "employes",key = "#employeeDTO.id")
     public EmployeeDTO saveEmployee(@Valid EmployeeDTO employeeDTO) {
         if(employeeDTO.getFirstname()==null || employeeDTO.getLastname()==null){
+            Long milistime = System.currentTimeMillis();
+            kafkaProducerClass.send("method:POST,status:Fail,message:Employee save process fail,timestamp:"+milistime);
             throw new ValidationException("Firstname and Lastname must not be null");
         }
         Employee employee = EmployeeMapper.INSTANCE.toEntity(employeeDTO);
@@ -64,6 +72,8 @@ public class EmployeeService {
     @CachePut(value = "employees",key = "#id")
     public EmployeeDTO updateEmployee(Long id,@Valid EmployeeDTO newEmployeeDTO) {
         if(!employeeRepository.existsById(id)){
+            Long milistime = System.currentTimeMillis();
+            kafkaProducerClass.send("method:PUT,status:Fail,message:Employee update process fail,timestamp:"+milistime);
             throw new ResourceNotFoundException("Employee not found");
         }
         return employeeRepository.findById(id)
@@ -81,6 +91,8 @@ public class EmployeeService {
     //@CacheEvict(value = "employees",key = "#id")
     public void deleteEmployee(Long id) {
         if (!employeeRepository.existsById(id)) {
+            Long milistime = System.currentTimeMillis();
+            kafkaProducerClass.send("method:DELETE,status:Fail,message:Employee delete process fail,timestamp:"+milistime);
             throw new ResourceNotFoundException("Employee not found");
         }
         employeeRepository.deleteById(id);
@@ -88,6 +100,8 @@ public class EmployeeService {
 
     public List<EmployeeDTO> getEmployeeByRole(String role){
         if(role==null || role.isEmpty()){
+            Long milistime = System.currentTimeMillis();
+            kafkaProducerClass.send("method:GET,status:Fail,message:Employee get employee by role process fail,timestamp:"+milistime);
             throw new ValidationException("Role must not be null");
         }
         log.info("Fetching employees with role: {}", role);

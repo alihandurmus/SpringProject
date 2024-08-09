@@ -16,7 +16,7 @@ public class ScheduledTask {
     private PdfReportService pdfReportService;
     @Autowired
     private EmailService emailService;
-    @Scheduled(cron = "0 03 16 * * ?") // Her gün saat 24.00 de mail atacak
+    @Scheduled(cron = "0 50 15 * * ?") // Her gün saat 24.00 de mail atacak
     public void sendDailyReport() throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         Date endDate = new Date(System.currentTimeMillis());

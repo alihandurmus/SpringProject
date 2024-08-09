@@ -2,6 +2,10 @@ package payroll.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import payroll.exception.ApiExceptionHandler;
+import payroll.exception.ApiRequestException;
+import payroll.exception.ResourceNotFoundException;
+import payroll.exception.ValidationException;
 import payroll.model.Employee;
 import payroll.model.EmployeeDTO;
 import payroll.model.Order;
@@ -18,27 +22,53 @@ public class OrderService {
     private OrderRepository orderRepository;
     @Autowired
     private EmployeeRepository employeeRepository;
+    @Autowired
+    private KafkaProducerClass kafkaProducerClass;
 
     public List<Order> getOrders() {
-        return orderRepository.findAll();
+        List orders = orderRepository.findAll();
+        if (orders.isEmpty()) {
+            Long milistime = System.currentTimeMillis();
+            kafkaProducerClass.send("method:GET,status:Fail,message:Order get process fail,timestamp:"+milistime);
+            throw new ValidationException("Page request is null");
+        }
+        return orders;
     }
 
     public Optional<Order> getOneOrder(Long id) {
+        if (!orderRepository.existsById(id)) {
+            Long milistime = System.currentTimeMillis();
+            kafkaProducerClass.send("method:GET,status:Fail,message:Order get one process fail,timestamp:"+milistime);
+            throw new ResourceNotFoundException("Order not found");
+        }
         return orderRepository.findById(id);
     }
 
     public Order saveOrder(Order order) {
-        List<Employee> employees = employeeRepository.findByRole(order.getRole());
-        order.setEmployees(employees);
-        for (Employee employee : employees) {
-            employee.getOrders().add(order);
-            employeeRepository.save(employee);
+        try {
+            List<Employee> employees = employeeRepository.findByRole(order.getRole());
+            order.setEmployees(employees);
+            for (Employee employee : employees) {
+                employee.getOrders().add(order);
+                employeeRepository.save(employee);
+            }
+            return orderRepository.save(order);
+        }catch (Exception e) {
+            Long milistime = System.currentTimeMillis();
+            kafkaProducerClass.send("method:POST,status:Fail,message:Order save process fail,timestamp:"+milistime);
+            return null;
         }
-        return orderRepository.save(order);
+
     }
 
     public List<Order> getOrderByRole(String role) {
-        return orderRepository.findByRole(role);
+        List orders = orderRepository.findByRole(role);
+        if (orders.isEmpty()) {
+            Long milistime = System.currentTimeMillis();
+            kafkaProducerClass.send("method:GET,status:Fail,message:Order get order by role process fail,timestamp:"+milistime);
+            throw new ResourceNotFoundException("Order not found");
+        }
+        return orders;
     }
    /* public Order cancelOrder(Long id,Order newOrder){
         return orderRepository.findById(id)

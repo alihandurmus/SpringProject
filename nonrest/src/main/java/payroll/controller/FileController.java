@@ -84,7 +84,8 @@ public class FileController {
 
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Disposition", "inline; filename=request_stats.pdf");
-
+        Long milistime = System.currentTimeMillis();
+        kafkaProducerClass.send("method:GET,status:Fail,message:File download fail,timestamp:"+milistime);
         return ResponseEntity
                 .ok()
                 .headers(headers)

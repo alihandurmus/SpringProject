@@ -21,6 +21,7 @@ import payroll.service.KafkaProducerClass;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -52,20 +53,25 @@ public class EmployeeController {
                 .map(assembler::toModel)
                 .collect(Collectors.toList());
         if(employees==null){
+            Long milistime = System.currentTimeMillis();
+            kafkaProducerClass.send("method:GET,status:Fail,message:Employee GET request fail,timestamp:"+milistime);
             throw new ResourceNotFoundException("Resource not found");
         }
-
+        Long milistime = System.currentTimeMillis();
+        kafkaProducerClass.send("method:GET,status:Success,message:Employee GET request successfully,timestamp:"+milistime);
         return CollectionModel.of(employees, linkTo(methodOn(EmployeeController.class).all(page,size)).withSelfRel());
 
     }
 
     //@ApiOperation(value = "Yeni çalışan ekle")
     @PostMapping()
-//Post metodu ile yeni employee ekleme
+    //Post metodu ile yeni employee ekleme
     ResponseEntity<?> newEmployee(
             //@ApiParam(value = "Yeni eklenee çalışan objesi")
             @Valid @RequestBody EmployeeDTO newEmployee) {
         EntityModel<EmployeeDTO> entityModel = assembler.toModel(employeeService.saveEmployee(newEmployee));
+        Long milistime = System.currentTimeMillis();
+        kafkaProducerClass.send("method:POST,status:Success,message:Employee save process successfully,timestamp:"+milistime);
         return ResponseEntity
                 .created(entityModel.getRequiredLink(IanaLinkRelations.SELF).toUri())
                 .body(entityModel);
@@ -80,7 +86,8 @@ public class EmployeeController {
             @PathVariable Long id) {
         EmployeeDTO employee = employeeService.getOneEmployee(id)
                 .orElseThrow(() -> new EmployeeNotFoundException(id));
-
+        Long milistime = System.currentTimeMillis();
+        kafkaProducerClass.send("method:GET,status:Success,message:Employee GET one process successfully,timestamp:"+milistime);
         return assembler.toModel(employee);
     }
 
@@ -93,6 +100,8 @@ public class EmployeeController {
             @PathVariable Long id) {
 
         EntityModel<EmployeeDTO> entityModel = assembler.toModel(employeeService.updateEmployee(id, newEmployee));
+        Long milistime = System.currentTimeMillis();
+        kafkaProducerClass.send("method:PUT,status:Success,message:Employee update process successfully,timestamp:"+milistime);
         return ResponseEntity
                 .created(entityModel.getRequiredLink(IanaLinkRelations.SELF).toUri())
                 .body(entityModel);
@@ -104,6 +113,8 @@ public class EmployeeController {
             //@ApiParam(value = "Silinecek çalışan id'si")
             @PathVariable Long id) {
         employeeService.deleteEmployee(id);
+        Long milistime = System.currentTimeMillis();
+        kafkaProducerClass.send("method:DELETE,status:Success,message:Employee delete process successfully,timestamp:"+milistime);
         return ResponseEntity.noContent().build();
     }
 
@@ -111,12 +122,17 @@ public class EmployeeController {
     public List<Order> getOrdersByEmployeeId(@PathVariable Long id) {
         EmployeeDTO employee = employeeService.getOneEmployee(id)
                 .orElseThrow(() -> new EmployeeNotFoundException(id));
+        Long milistime = System.currentTimeMillis();
+        kafkaProducerClass.send("method:GET,status:Success,message:Employee GET orders by employee id process successfully,timestamp:"+milistime);
         return orderRepository.findByRole(employee.getRole());
     }
 
     @GetMapping("/role/{role}")
     public List<EmployeeDTO> getEmployeesByRole(@PathVariable String role) {
-        return employeeService.getEmployeeByRole(role);
+        List<EmployeeDTO> employees = employeeService.getEmployeeByRole(role);
+        Long milistime = System.currentTimeMillis();
+        kafkaProducerClass.send("method:GET,status:Success,message:Employee GET orders by employee id process successfully,timestamp:"+milistime);
+        return employees;
 
     }
 
